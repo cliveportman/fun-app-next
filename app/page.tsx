@@ -1,22 +1,15 @@
-import dayjs from 'dayjs'
-import duration from 'dayjs/plugin/duration'
-dayjs.extend(duration)
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
+dayjs.extend(duration);
 
 async function getData() {
-  const res = await fetch('https://fun-api-next.vercel.app/api/activity')
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
- 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }  
- 
-  return res.json()
+  const res = await fetch('https://fun-api-next.vercel.app/api/activity'); 
+  if (!res.ok) throw new Error('Failed to fetch data'); 
+  return res.json();
 }
  
 export default async function Page() {
-  const activity = await getData()
+  const activity = await getData();
  
   return (
     <main className="p-6">
