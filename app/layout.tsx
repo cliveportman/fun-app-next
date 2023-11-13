@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="bg-cyan-900 " >
-      <body className={openSans.className}>{children}</body>
+    <html lang="en" className="bg-cyan-900" >
+      <body className={openSans.className + ' p-6'}>{children}</body>
     </html>
   )
 }

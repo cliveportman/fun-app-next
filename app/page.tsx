@@ -12,7 +12,7 @@ export default async function Page() {
   const activity = await getData();
  
   return (
-    <main className="p-6">
+    <main>
       <ul className="text-yellow-200 text-5xl font-bold leading-tight">
         <li className="font-bold">{activity.name }</li>
         <li>{ (activity.distance / 1000).toLocaleString('en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) } km</li>
